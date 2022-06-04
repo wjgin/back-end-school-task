@@ -1,4 +1,4 @@
-package com.backendschool.task.taskOneToFour;
+package com.backendschool.task.taskOneToFive;
 
 public class TaskTwo {
     public static void main(String[] args) {

@@ -1,6 +1,5 @@
-package com.backendschool.task.taskOneToFour;
+package com.backendschool.task.taskOneToFive;
 
-import java.io.InputStreamReader;
 import java.util.Arrays;
 
 public class TaskThree {
