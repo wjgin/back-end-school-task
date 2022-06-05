@@ -12,12 +12,10 @@ public class TaskThree {
         for (int i = 1; i <= 10; i++) {
             System.out.print("숫자 " + i + " : ");
             numberString = numberInput.inputNumber();
-
-            while (!numberInput.isNumber(numberString)) {
-                System.out.print("숫자 " + i + " : ");
-                numberString = numberInput.inputNumber();
+            if(!numberInput.isNumber(numberString)) {
+               i--;
+               continue;
             }
-
             numberList[i - 1] = Float.parseFloat(numberString);
         }
         Arrays.sort(numberList);

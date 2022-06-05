@@ -14,12 +14,9 @@ public class TaskFive {
         while (true) {
             System.out.print("숫자 " + i + " : ");
             numberString = numberInput.inputNumber();
-
-            while (!numberInput.isNumber(numberString)) {
-                System.out.print("숫자 " + i + " : ");
-                numberString = numberInput.inputNumber();
-            }
+            if (!numberInput.isNumber(numberString)) continue;
             if (Float.parseFloat(numberString) == 0f) break;
+
             if (numberInput.isInt(numberString)) {
                 numberString = numberInput.removeDotIfInt(numberString);
                 if (numberInput.isPrime(Integer.parseInt(numberString))) {
@@ -32,7 +29,6 @@ public class TaskFive {
             }
             i++;
         }
-
         System.out.println("결과 : " + primeNumbers.toString().replaceAll("[\\[\\]]", ""));
     }
 }

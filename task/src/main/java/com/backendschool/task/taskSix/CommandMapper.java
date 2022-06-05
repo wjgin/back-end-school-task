@@ -4,8 +4,10 @@ import java.util.*;
 
 public class CommandMapper {
 
-    static CommandMapper commandMapper = new CommandMapper();
+    static final CommandMapper commandMapper = new CommandMapper();
     BoardRepository boardRepository = BoardRepository.getBoardRepository();
+
+    protected CommandMapper() {}
 
     public static CommandMapper getCommandMapper() {
         return commandMapper;

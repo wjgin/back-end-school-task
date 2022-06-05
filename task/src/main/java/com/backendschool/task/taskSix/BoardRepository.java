@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class BoardRepository {
-    static ArrayList<Map> boardList = new ArrayList<>();
+    static final ArrayList<Map> boardList = new ArrayList<>();
     static final BoardRepository boardRepository = new BoardRepository();
 
-    static public BoardRepository getBoardRepository(){
+    protected BoardRepository() {}
+
+    public static BoardRepository getBoardRepository(){
         return boardRepository;
     }
 
